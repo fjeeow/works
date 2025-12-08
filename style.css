@@ -18,8 +18,18 @@ img {
     z-index: -10;
     margin-top: 0%;
     display: block;
+    top: 0%;
+    left: 13.7%;
 }
 
 @media screen and (max-width: 704px) {
     
+img {
+   position: absolute;
+   line-height: 100%;
+   display: inline-block;
+   top: 0;
+   margin-right: auto;
+   margin-left: auto;
+}
 }
