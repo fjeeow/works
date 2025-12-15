@@ -13,13 +13,67 @@ body {
 }
 
 img {
-   position: absolute;
+    position: absolute;
+    transform: translate(12.4%, 0%);
     height: 100%;
-    z-index: -10;
     margin-top: 0%;
     display: block;
-    top: 0%;
-    left: 13.7%;
+    z-index: -10;
+}
+
+
+.links a {
+  font-family: sans-serif;
+  font-size: 18pt;
+  color: red;
+  text-decoration: none;
+
+  white-space: nowrap;        /* 각 링크 내부 줄바꿈 방지 */
+  word-break: keep-all;       /* 한글 깨짐 방지 */
+
+  letter-spacing: 0px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+.links a:last-child {
+  margin-right: 0;
+}
+.links a:link,
+.links a:visited,
+.links a:hover {
+  color: red;
+  text-decoration: none;
+}
+.links a:active {
+  color: black;
+}
+.links a:nth-child(1) {
+  margin-right: 600px;
+}
+.links a:nth-child(2) {
+  margin-right: 100px;
+}
+
+.links {
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-30%);
+
+  display: flex;              /* 핵심 */
+  flex-direction: row;
+  flex-wrap: nowrap;          /* 줄바꿈 금지 */
+  align-items: center;
+  justify-content: center;
+  gap: 0;                  /* 링크 간 간격 (margin 대신) */
+
+  white-space: nowrap;        /* 이중 안전장치 */
+  opacity: 1;
+
+  z-index: 999;
 }
 
 @media screen and (max-width: 704px) {
@@ -32,4 +86,8 @@ img {
    margin-right: auto;
    margin-left: auto;
 }
+
+
+
+
 }
